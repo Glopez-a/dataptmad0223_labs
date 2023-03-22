@@ -12,12 +12,13 @@ The following function shows one way to solve the problem but the code is not id
 Refactor the code based on what you have learned about code simplicity and efficiency.
 """
 
-def my_function(X):
+def my_function(n):
+
     solutions = []
-    for x in range(5, X):
-        for y in range(4, X):
-            for z in range(3, X):
-                if (x*x==y*y+z*z):
+    for x in range(5, n):
+        for y in range(4, n):
+            for z in range(3, n):
+                if (x**2 == y**2 + z**2):
                     solutions.append([x, y, z])
     m = 0
     for solution in solutions:
@@ -25,6 +26,6 @@ def my_function(X):
             m = max(solution)
     return m
 
-X = input("What is the maximal length of the triangle side? Enter a number: ")
+x = input("What is the maximal length of the triangle side? Enter a number: ")
 
-print("The longest side possible is " + str(my_function(int(X))))
+print("The longest side possible is " + str(my_function(int(x))))
